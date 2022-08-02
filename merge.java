@@ -5,21 +5,15 @@ class Merge {
         int i, j, k;
         int n1 = mid - beg + 1;
         int n2 = end - mid;
-
-        /* temporary Arrays */
         int LeftArray[] = new int[n1];
         int RightArray[] = new int[n2];
-
-        /* copy data to temp arrays */
         for (i = 0; i < n1; i++)
             LeftArray[i] = a[beg + i];
         for (j = 0; j < n2; j++)
             RightArray[j] = a[mid + 1 + j];
-
         i = 0;
         j = 0;
         k = beg;
-
         while (i < n1 && j < n2) {
             if (LeftArray[i] <= RightArray[j]) {
                 a[k] = LeftArray[i];
